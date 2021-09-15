@@ -2,12 +2,10 @@
 title: "关于let的两三事"
 date: 2021-09-14T22:52:59+08:00
 draft: false
-tags: ["js", "fontend"]
+tags: ["JavaScript", "Fontend"]
 ---
 
-## 关于let的两三事
-
-### 一、从定义角度出发
+## 一、从定义角度出发
 
 > let 语句声明一个块级作用域的本地变量，并且可选的将其初始化为一个值。
 >
@@ -15,7 +13,7 @@ tags: ["js", "fontend"]
 
 对比[关键字let](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/let)和[关键字var](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/var)的定义可以看出， `let`强调了**块级作用域** 的 **本地变量**, 那么下面尝试从 `块级作用域` 和 `本地变量` 度看看`let`带来了什么。
 
-#### 块作用域
+### 块作用域
 
 从一个的例子看区别：
 
@@ -43,7 +41,7 @@ varFunc();
 
 `let`变量的作用域被限制到了最近的代码块中，而`var`却能从函数内部的代码块“逃逸”出来，作用域变成函数级别。
 
-#### 本地变量
+### 本地变量
 
 `let` 不会给全局对象创建属性，而`var`会！
 
@@ -58,7 +56,7 @@ console.log(this.letName);
 
 这点和隐式全局变量（未使用关键字`var` 或 `let`直接创建的变量）是一样的， 隐式变量也会给全局对象添加属性。
 
-### 二、从初始化时间点出发
+## 二、从初始化时间点出发
 
 > 与通过  var 声明的有初始化值 undefined 的变量不同，通过 let 声明的变量直到它们的定义被执行时才初始化。
 
@@ -109,7 +107,7 @@ if语句块内部，foo被认为是`let`变量，声明+赋值表达式 执行�
 
 ## 三、结束语
 
-> "简单说两句“ —— 往往不止两句
+> "简单说两句” —— 往往不止两句
 
 说好的两三事，好像说得已经超过了
 
